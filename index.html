@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda de Tareas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<section id="loginScreen" class="pantalla activa">
+
+<div class="login-card">
+
+<div class="logo">
+✓
+</div>
+
+<h1>Agenda de Tareas</h1>
+
+<p class="subtitulo">
+Organiza tu día de manera eficiente
+</p>
+
+<input type="text" id="usuario" placeholder="Usuario">
+
+<input type="password" id="password" placeholder="Contraseña">
+
+<button onclick="iniciarSesion()">
+Iniciar Sesión
+</button>
+
+<p class="registro">
+¿No tienes cuenta?
+<a href="#">Regístrate aquí</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- MIS TAREAS -->
+
+<section id="tareasScreen" class="pantalla">
+
+<header class="topbar">
+
+<h2>Mis Tareas</h2>
+
+<button onclick="mostrarPerfil()">
+Perfil
+</button>
+
+</header>
+
+<div class="contenido">
+
+<div class="estadisticas">
+
+<div class="card">
+<h3 id="pendientes">0</h3>
+<p>Pendientes</p>
+</div>
+
+<div class="card">
+<h3 id="completadas">0</h3>
+<p>Completadas</p>
+</div>
+
+</div>
+
+<div class="agregar">
+
+<input type="text"
+id="nuevaTarea"
+placeholder="Escribe una tarea">
+
+<button onclick="agregarTarea()">
+Agregar
+</button>
+
+</div>
+
+<h3>Tareas Pendientes</h3>
+
+<ul id="listaPendientes">
+</ul>
+
+<h3>Tareas Completadas</h3>
+
+<ul id="listaCompletadas">
+</ul>
+
+</div>
+
+<button class="boton-flotante"
+onclick="enfocarInput()">
++
+</button>
+
+</section>
+
+<!-- PERFIL -->
+
+<section id="perfilScreen" class="pantalla">
+
+<div class="perfil-card">
+
+<div class="avatar">
+JF
+</div>
+
+<h2>Jhon Fredy Moyano</h2>
+
+<p>
+jhonfredy@email.com
+</p>
+
+<div class="estadisticas">
+
+<div class="card">
+<h3 id="perfilCompletadas">0</h3>
+<p>Completadas</p>
+</div>
+
+<div class="card">
+<h3 id="perfilPendientes">0</h3>
+<p>Pendientes</p>
+</div>
+
+</div>
+
+<div class="barra">
+
+<div id="progreso"
+class="relleno">
+</div>
+
+</div>
+
+<button>
+Editar Perfil
+</button>
+
+<button onclick="cerrarSesion()"
+class="cerrar">
+Cerrar Sesión
+</button>
+
+<button onclick="volverTareas()">
+Volver
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
